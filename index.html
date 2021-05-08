@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Paragraph using Join</title>
+    </head>
+    <body>
+    <center>
+        <h1>Paragraph using Join</h1>
+        <div>
+        <h4><span>1</span><input type="text" id="t1" placeholder="Enter Sentence"><br><br>
+            <span>2</span><input type="text" id="t2" placeholder="Enter Sentence"><br><br>
+            <span>3</span><input type="text" id="t3" placeholder="Enter Sentence"><br><br>
+            <span>4</span><input type="text" id="t4" placeholder="Enter Sentence"><br><br>
+            <span>5</span><input type="text" id="t5" placeholder="Enter Sentence"><br><br>
+            <span>6</span><input type="text" id="t6" placeholder="Enter Sentence"><br><br>
+            </h4>
+            <button onclick="parag()">Get Paragraph</button>
+        </div>
+        </center>
+        <br>
+        <h3 id="para"></h3>
+    <script> 
+        function parag(){
+            var text=[]
+            for (var i=1;i<7;i++){
+                text.push(document.getElementById("t"+i).value)
+            }
+            document.getElementById("para").innerHTML=text.join(".")
+        }
+        </script>
+    </body>
+</html>
